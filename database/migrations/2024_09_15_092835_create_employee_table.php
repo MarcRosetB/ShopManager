@@ -11,21 +11,21 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create("employees", function (Blueprint $table) {
-            $table->id("EmployeeID");
-            $table->string("EmployeeName", 20);
-            $table->char("EmployeePhone", 9)->unique();
-            $table->string("EmployeeEmail", 50)->unique();
-            $table->char("EmployeeDni", 9)->unique();
-            $table->string("EmployeePassword", 270);
-            $table->boolean("EmployeePermissions");
-            $table->unsignedBigInteger("FkShop");
-            $table->unsignedBigInteger("FKDepartment");
+            $table->id("employee_id");
+            $table->string("employee_name", 20);
+            $table->char("employee_phone", 9)->unique();
+            $table->string("employee_email", 50)->unique();
+            $table->char("employee_dni", 9)->unique();
+            $table->string("employee_password", 270);
+            $table->boolean("employee_permissions");
+            $table->unsignedBigInteger("fk_shop");
+            $table->unsignedBigInteger("fk_department");
 
-            $table->foreign("FkShop")->references("ShopId")->on("Shops");
+            $table->foreign("fk_shop")->references("shop_id")->on("shops");
             $table
-                ->foreign("FKDepartment")
-                ->references("DepartmentId")
-                ->on("Departments");
+                ->foreign("fk_department")
+                ->references("department_id")
+                ->on("departments");
         });
     }
 
