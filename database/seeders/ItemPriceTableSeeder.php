@@ -14,19 +14,19 @@ class ItemPriceTableSeeder extends Seeder
     {
         DB::table("items_price")->insert([
             [
-                "FkItem" => 2,
-                "FkColour" => 2,
-                "ItemPrice" => 240,
+                "fk_item" => 2,
+                "fk_colour" => 2,
+                "item_price" => 240,
             ],
             [
-                "FkItem" => 1,
-                "FkColour" => 3,
-                "FkItemPrice" => 350,
+                "fk_item" => 1,
+                "fk_colour" => 3,
+                "item_price" => 350,
             ],
             [
-                "FkItem" => 2,
-                "FkColour" => 3,
-                "FkItemPrice" => 280,
+                "fk_item" => 2,
+                "fk_colour" => 3,
+                "item_price" => 280,
             ],
         ]);
     }
