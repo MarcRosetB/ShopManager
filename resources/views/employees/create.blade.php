@@ -29,7 +29,7 @@
     @endif
 
     <!--Mostrar formulario ---->
-    <form action="{{ route('employee.sotre') }}" method="post">
+    <form action="{{ route('employee.store') }}" method="post">
         @csrf
         <label>Nombre:</label>
         <input type="text" name="employee_name" id="employee_name" value="{{ old('employee_name') }}">
@@ -40,7 +40,7 @@
         <label>Email:</label>
         <input type="email" name="employee_email" id="employee_email" value="{{ old('employee_email') }}">
         <label>Contraseña</label>
-        <input type="password" name="employee_password" id="employee_passwprd" value="{{ odl('employee_password') }}">
+        <input type="password" name="employee_password" id="employee_password" value="{{ old('employee_password') }}">
         <label>Tienda:</label>
         <input type="text" name="shop_name" id="shop_id" value="{{ old('shop_name') }}">
         <div class="assigments">
@@ -52,10 +52,12 @@
                 <input type="radio" name="permission" value="no">
             </div>
             <div class="departments">
-                <label>Departamento:</label>
+                <label for="department_id">Departamento:</label>
                 <select name="employee_department" id="employee_department">
                     <option value="">Seleccionar un departamento</option>
-                    <option value=""></option>
+                    @foreach($departments as $department)
+                    <option value="{{ $department->id }}">{{ $department->name }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
