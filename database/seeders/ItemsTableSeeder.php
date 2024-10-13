@@ -15,11 +15,12 @@ class ItemsTableSeeder extends Seeder
         DB::table("items")->insert([
             [
                 "item_name" => "Kubika",
-                "item_sice" => "140x80",
+                "item_size" => "140x80",
                 "fk_item_type" => 2,
             ],
             [
                 "item_name" => "Kendo",
+                "item_size" => null,
                 "fk_item_type" => 1,
             ],
         ]);

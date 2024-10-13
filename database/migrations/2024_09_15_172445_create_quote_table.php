@@ -24,8 +24,8 @@ return new class extends Migration {
                 ->on("customers");
             $table
                 ->foreign("fk_address_delivery")
-                ->references("address_delivery_id")
-                ->on("addresses_delivery");
+                ->references("delivery_address_id")
+                ->on("delivery_addresses");
             $table
                 ->foreign("fk_employee")
                 ->references("employee_id")
