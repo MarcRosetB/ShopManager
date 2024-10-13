@@ -39,7 +39,20 @@
         <input type="text" name="employee_phone" id="employee_phone" value="{{ old('employee_phone') }}">
         <label>Email:</label>
         <input type="email" name="employee_email" id="employee_email" value="{{ old('employee_email') }}">
+        <label>Contraseña</label>
+        <input type="password" name="employee_password" id="employee_passwprd" value="{{ odl('employee_password') }}">
+        <label>Tienda:</label>
+        <input type="text" name="shop_name" id="shop_id" value="{{ old('shop_name') }}">
+        <div class="assigments">
+            <div class="permissions">
+                <label>Asignar permisos:</label>
+                <label>Sí</label>
+                <input type="radio" name="permission" value="yes">
+                <label>No</label>
+                <input type="radio" name="permission" value="no">
+            </div>
 
+        </div>
     </form>
 </body>
 
