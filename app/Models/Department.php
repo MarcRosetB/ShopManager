@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Department extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name', // Agrega aquí los campos que deseas permitir la asignación masiva
+    ];
 }
