@@ -35,6 +35,9 @@
         <input type="text" name="employee_name" id="employee_name" value="{{ old('employee_name') }}">
         <label>DNI:</label>
         <input type="text" name="employee_dni" id="employee_dni" value="{{ old('employee_dni) }}">
+        <label>Teléfono:</label>
+        <input type="text" name="employee_phone" id="employee_phone" value="{{ old('employee_phone) }}">
+
     </form>
 </body>
 
