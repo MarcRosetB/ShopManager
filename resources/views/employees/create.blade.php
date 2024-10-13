@@ -51,8 +51,15 @@
                 <label>No</label>
                 <input type="radio" name="permission" value="no">
             </div>
-
+            <div class="departments">
+                <label>Departamento:</label>
+                <select name="employee_department" id="employee_department">
+                    <option value="">Seleccionar un departamento</option>
+                    <option value=""></option>
+                </select>
+            </div>
         </div>
+        <button type="submit">REGISTRAR</button>
     </form>
 </body>
 
