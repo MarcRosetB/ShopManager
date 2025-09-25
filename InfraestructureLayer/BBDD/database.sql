@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS ShopManager;
+CREATE DATABASE ShopManager;
+USE ShopManager;
