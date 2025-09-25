@@ -72,3 +72,12 @@ CREATE TABLE Item (
     Fk_Color INT NOT NULL,
     FOREIGN KEY (Fk_Color) REFERENCES Color (ColorId)
 );
+
+CREATE TABLE Estimate (
+    EstimateId INT AUTO_INCREMENT PRIMARY KEY,
+    EstimateDate DATE NOT NULL,
+    Fk_DeliveryAddress INT NOT NULL,
+    Fk_Employee INT NOT NULL,
+    FOREIGN KEY (Fk_DeliveryAddress) REFERENCES DeliveryAddress(DeliveryAddressId),
+    FOREIGN KEY (Fk_Employee) REFERENCES Employee(EmployeeId)
+);
