@@ -81,3 +81,12 @@ CREATE TABLE Estimate (
     FOREIGN KEY (Fk_DeliveryAddress) REFERENCES DeliveryAddress(DeliveryAddressId),
     FOREIGN KEY (Fk_Employee) REFERENCES Employee(EmployeeId)
 );
+
+CREATE TABLE ItemInEstimate (
+    ItemInEstimateId INT AUTO_INCREMENT PRIMARY KEY,
+    Fk_Item INT NOT NULL,
+    FK_Estimate INT NOT NULL,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (Fk_Item) REFERENCES Item (ItemId),
+    FOREIGN KEY (FK_Estimate) REFERENCES Estimate (EstimateId)
+);
