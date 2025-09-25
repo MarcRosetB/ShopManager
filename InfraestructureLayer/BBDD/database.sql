@@ -48,3 +48,12 @@ CREATE TABLE ContactPerson (
     ContactPersonPhone CHAR(9) UNIQUE NOT NULL,
     ContactPersonEmail VARCHAR (100) UNIQUE
 );
+
+CREATE TABLE DeliveryAddress (
+    DeliveryAddressId INT AUTO_INCREMENT PRIMARY KEY,
+    DeliveryAddressAddress VARCHAR (150) NOT NULL UNIQUE,
+    Fk_Town INT NOT NULL,
+    Fk_Client INT NOT NULL,
+    FOREIGN KEY (Fk_Town) REFERENCES Town(TownId),
+    FOREIGN KEY (Fk_Client) REFERENCES Client (ClientId)
+);
