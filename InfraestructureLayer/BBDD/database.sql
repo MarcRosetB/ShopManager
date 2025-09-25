@@ -30,3 +30,14 @@ CREATE TABLE Employee (
     FOREIGN KEY (Fk_Department) REFERENCES Department(DepartmentId),
     FOREIGN KEY (Fk_Shop) REFERENCES Shop(ShopId)
 );
+
+CREATE TABLE Client (
+    ClientId INT AUTO_INCREMENT PRIMARY KEY,
+    ClientName VARCHAR (100) NOT NULL,
+    ClientAddress VARCHAR(150) NOT NULL,
+    ClientPhone CHAR(9) UNIQUE NOT NULL,
+    ClientEmail VARCHAR(50) NOT NULL,
+    Fk_Town INT NOT NULL,
+    ClientCIF CHAR (9) NOT NULL UNIQUE,
+    FOREIGN KEY (Fk_Town) REFERENCES Town(TownId)
+);
