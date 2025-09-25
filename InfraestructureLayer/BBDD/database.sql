@@ -97,3 +97,12 @@ CREATE TABLE CustomerOrder (
     Fk_Estimate INT NOT NULL,
     FOREIGN KEY (Fk_Estimate) REFERENCES Estimate (EstimateId)
 );
+
+CREATE TABLE Delivery (
+    DeliveryId INT AUTO_INCREMENT PRIMARY KEY,
+    DeliveryDate DATE NOT NULL,
+    Fk_DeliveryAddress INT NOT NULL,
+    Fk_Employee INT NOT NULL,
+    FOREIGN KEY (Fk_DeliveryAddress) REFERENCES DeliveryAddress (DeliveryAddressId),
+    FOREIGN KEY (Fk_Employee) REFERENCES Employee (EmployeeId)
+);
