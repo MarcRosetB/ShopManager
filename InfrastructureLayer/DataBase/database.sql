@@ -55,3 +55,8 @@ CREATE TABLE DeliveryAddress (
     FOREIGN KEY (Fk_Town) REFERENCES Town(TownId),
     FOREIGN KEY (Fk_Client) REFERENCES Client (ClientId)
 );
+
+CREATE TABLE Color (
+    ColorId INT AUTO_INCREMENT PRIMARY KEY,
+    ColorName VARCHAR(50) UNIQUE NOT NULL
+);
