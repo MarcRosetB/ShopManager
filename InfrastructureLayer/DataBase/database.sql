@@ -13,3 +13,8 @@ CREATE TABLE Shop (
     Fk_Town INT NOT NULL,
     FOREIGN KEY (Fk_Town) REFERENCES Town(TownId)
 );
+
+CREATE TABLE Department (
+    DepartmentId INT AUTO_INCREMENT PRIMARY KEY,
+    DepartmentName VARCHAR (50)
+);
