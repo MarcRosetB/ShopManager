@@ -60,3 +60,13 @@ CREATE TABLE Color (
     ColorId INT AUTO_INCREMENT PRIMARY KEY,
     ColorName VARCHAR(50) UNIQUE NOT NULL
 );
+
+CREATE TABLE Item (
+    ItemId INT AUTO_INCREMENT PRIMARY KEY,
+    ItemName VARCHAR (10),
+    ItemPrice DECIMAL (10,2),
+    ItemSize VARCHAR(10),
+    ItemQuantity INT,
+    Fk_Color INT,
+    FOREIGN KEY (Fk_Color) REFERENCES Color (ColorId)
+);
