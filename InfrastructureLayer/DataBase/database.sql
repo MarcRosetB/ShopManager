@@ -70,3 +70,12 @@ CREATE TABLE Item (
     Fk_Color INT,
     FOREIGN KEY (Fk_Color) REFERENCES Color (ColorId)
 );
+
+CREATE TABLE ItemInEstimate (
+    ItemInEstimateId INT AUTO_INCREMENT PRIMARY KEY,
+    Fk_Item INT,
+    FK_Estimate INT,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (Fk_Item) REFERENCES Item (ItemId),
+    FOREIGN KEY (FK_Estimate) REFERENCES Estimate (EstimateId)
+);
