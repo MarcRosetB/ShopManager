@@ -9,3 +9,7 @@ INSERT INTO Shop (ShopNickName, Fk_Town) VALUES ('Badalona', 3);
 INSERT INTO Department (DepartmentName) VALUES ('Ventas');
 INSERT INTO Department (DepartmentName) VALUES ('Contabilidad');
 INSERT INTO Department (DepartmentName) VALUES ('Montadores');
+
+INSERT INTO Color (ColorName) VALUES ('Negro');
+INSERT INTO Color (ColorName) VALUES ('Rojo');
+INSERT INTO Color (ColorName) VALUES ('Azul');
