@@ -79,3 +79,10 @@ CREATE TABLE ItemInEstimate (
     FOREIGN KEY (Fk_Item) REFERENCES Item (ItemId),
     FOREIGN KEY (FK_Estimate) REFERENCES Estimate (EstimateId)
 );
+
+CREATE TABLE CustomerOrder (
+    OrderId INT AUTO_INCREMENT PRIMARY KEY,
+    OrderDate DATE NOT NULL,
+    Fk_Estimate INT,
+    FOREIGN KEY (Fk_Estimate) REFERENCES Estimate (EstimateId)
+);
