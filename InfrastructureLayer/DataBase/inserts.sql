@@ -13,3 +13,7 @@ INSERT INTO Department (DepartmentName) VALUES ('Montadores');
 INSERT INTO Color (ColorName) VALUES ('Negro');
 INSERT INTO Color (ColorName) VALUES ('Rojo');
 INSERT INTO Color (ColorName) VALUES ('Azul');
+
+INSERT INTO Item (ItemName, ItemPrice, ItemQuantity, Fk_Color) VALUES ('Silla Kendo', 300, 100, 1);
+INSERT INTO Item (ItemName, ItemPrice, ItemQuantity, Fk_Color) VALUES ('Silla Sugar', 250, 50, 2);
+INSERT INTO Item (ItemName, ItemPrice, ItemQuantity, Fk_Color) VALUES ('Silla Tekno', 200, 30, 3);
