@@ -39,3 +39,10 @@ CREATE TABLE Client (
     ClientCIF CHAR (9) NOT NULL UNIQUE,
     FOREIGN KEY (Fk_Town) REFERENCES Town(TownId)
 );
+
+CREATE TABLE ContactPerson (
+    ContactPersonId INT AUTO_INCREMENT PRIMARY KEY,
+    ContactPersonName VARCHAR (50) NOT NULL,
+    ContactPersonPhone CHAR(9) UNIQUE NOT NULL,
+    ContactPersonEmail VARCHAR (100) UNIQUE
+);
