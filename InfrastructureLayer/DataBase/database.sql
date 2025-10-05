@@ -97,3 +97,10 @@ CREATE TABLE Delivery (
     FOREIGN KEY (Fk_Employee) REFERENCES Employee (EmployeeId),
     FOREIGN KEY (Fk_Order) REFERENCES CustomerOrder (OrderId)
 );
+
+CREATE TABLE Invoice (
+    InvoiceId INT AUTO_INCREMENT PRIMARY KEY,
+    InvoiceDate DATE NOT NULL,
+    FK_Delivery INT,
+    FOREIGN KEY (FK_Delivery) REFERENCES Delivery(DeliveryId)
+);
