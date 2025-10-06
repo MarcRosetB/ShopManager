@@ -43,4 +43,9 @@ class Employee
             $connection->closeConnection();
         }
     }
+
+    private function setName($name): void
+    {
+        $this->employeeName = $name;
+    }
 }
