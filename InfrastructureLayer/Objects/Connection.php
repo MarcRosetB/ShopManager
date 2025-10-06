@@ -36,4 +36,9 @@ class Connection
             die("Error de conexión: " . $e->getMessage());
         }
     }
+
+    public function closeConnection()
+    {
+        $this->conn = null;
+    }
 }
