@@ -25,4 +25,22 @@ class Employee
         $this->employeeShop = $shop;
         $this->employeeDepartment = $department;
     }
+
+    public function getAllEmployees(): array
+    {
+        try {
+            $connection = new Connection();
+            $conn = $connection->startConnection();
+
+            $sql = "SELECT * FROM Employee";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            die("Error de consulta: " . $e->getMessage());
+        } finally {
+            $connection->closeConnection();
+        }
+    }
 }
