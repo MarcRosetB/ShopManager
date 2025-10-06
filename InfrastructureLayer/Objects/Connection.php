@@ -18,7 +18,7 @@ class Connection
         $this->dbPwd = $config["dbPwd"];
     }
 
-    private function startConnection(): PDO
+    public function startConnection(): PDO
     {
         try {
             $this->conn = new PDO(
