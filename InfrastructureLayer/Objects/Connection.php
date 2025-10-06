@@ -18,7 +18,7 @@ class Connection
         $this->dbPwd = $config["dbPwd"];
     }
 
-    private function startConnection()
+    private function startConnection(): PDO
     {
         try {
             $this->conn = new PDO(
@@ -37,7 +37,7 @@ class Connection
         }
     }
 
-    public function closeConnection()
+    public function closeConnection(): void
     {
         $this->conn = null;
     }
