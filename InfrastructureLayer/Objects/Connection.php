@@ -12,10 +12,10 @@ class Connection
     public function __construct()
     {
         $config = getConfig();
-        $host = $config["dbHost"];
-        $dbName = $config["dbName"];
-        $dbUser = $config["dbUser"];
-        $dbPwd = $config["dbPwd"];
+        $this->host = $config["dbHost"];
+        $this->dbName = $config["dbName"];
+        $this->dbUser = $config["dbUser"];
+        $this->dbPwd = $config["dbPwd"];
     }
 
     private function startConnection()
