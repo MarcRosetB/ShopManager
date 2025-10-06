@@ -8,14 +8,32 @@ class Connection
     private $dbUser;
     private $dbPwd;
     public $conn;
-    
-    public function __construct(){
+
+    public function __construct()
+    {
         $config = getConfig();
-        $host = $config['dbHost'];
-        $dbName = $config['dbName'];
-        $dbUser = $config['dbUser'];
-        $dbPwd = $config['dbPwd'];
+        $host = $config["dbHost"];
+        $dbName = $config["dbName"];
+        $dbUser = $config["dbUser"];
+        $dbPwd = $config["dbPwd"];
     }
-    
-    
+
+    private function startConnection()
+    {
+        try {
+            $this->conn = new PDO(
+                "mysql:host=$this->host;dbname=$this->dbName;charset=utf8",
+                $this->dbUser,
+                $this->dbPwd,
+            );
+            $this->conn->setAttribute(
+                PDO::ATTR_ERRMODE,
+                PDO::ERRMODE_EXCEPTION,
+            );
+
+            return $this->conn;
+        } catch (PDOException $e) {
+            die("Error de conexión: " . $e->getMessage());
+        }
+    }
 }
